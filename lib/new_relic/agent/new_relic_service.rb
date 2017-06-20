@@ -28,7 +28,7 @@ module NewRelic
 
       # These include Errno connection errors, and all indicate that the
       # underlying TCP connection may be in a bad state.
-      CONNECTION_ERRORS = [Timeout::Error, EOFError, SystemCallError, SocketError].freeze
+      CONNECTION_ERRORS = [Timeout::Error, EOFError, SystemCallError, SocketError, SignalException].freeze
 
       attr_accessor :request_timeout, :agent_id
       attr_reader :collector, :marshaller
